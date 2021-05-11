@@ -1,0 +1,24 @@
+Crear el BOT
+https://www.atareao.es/tutorial/crea-tu-propio-bot-para-telegram/
+
+BOT en python
+https://www.atareao.es/tutorial/crea-tu-propio-bot-para-telegram/bot-en-python-para-telegram/
+
+BOT en BASH
+https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html
+https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html
+
+1 Enviar mensaje
+curl -s -X POST "https://api.telegram.org/bot"<TOKEN>"/sendMessage" -d chat_id=$ID -d text="$MENSAJE"
+
+2 Enviar foto
+curl -X  POST "https://api.telegram.org/bot"<TOKEN>"/sendPhoto" -F chat_id="<ID>" -F photo="@<RUTA DE NUESTRA IMAGEN>"
+
+3 Postear foto en internet
+curl -X  POST "https://api.telegram.org/bot"<TOKEN>"/sendPhoto" -F chat_id="<ID>" -F photo="<RUTA DE LA IMAGEN EN INTERNET>"
+
+4 Enviar foto con caption
+curl -X  POST "https://api.telegram.org/bot"<TOKEN>"/sendPhoto" -F chat_id="<ID>" -F caption="<TEXTO JUNTO IMAGEN>" -F photo="@<RUTA DE NUESTRA IMAGEN>"
+
+5 Enviar documento
+curl -X  POST "https://api.telegram.org/bot"<TOKEN>"/sendDocument" -F chat_id="<ID>" -F caption="<TEXTO> -F document="@<RUTA DEL ARCHIVO>"
